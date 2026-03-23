@@ -7,6 +7,48 @@
    - Cream/Off-white: #fdf6ec (background light)
    - Rich Red: #b02a2a (highlight)
 ============================================= */
+/* Make your layout responsive on mobile using flexbox */
+
+/* Add this to your existing CSS */
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Target your main container — change .container to your actual class/id */
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    /* Force all direct children to stack vertically and fill width */
+    .container>* {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* If you have side-by-side columns, stack them */
+    .row,
+    .columns,
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Images shouldn't overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 :root {
     --green-dark: #1a4a2e;
